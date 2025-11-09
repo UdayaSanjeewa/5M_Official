@@ -191,7 +191,7 @@ export default function Home() {
 
           <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-cyan-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" style={{ animationDuration: '25s' }} />
 
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500 rounded-full blur-3xl opacity-15 animate-float" style={{ animationDuration: '15s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500 rounded-full blur-3xl opacity-5 animate-float" style={{ animationDuration: '15s' }} />
 
           <canvas id="hero-canvas" className="absolute inset-0 w-full h-full z-10"></canvas>
 
