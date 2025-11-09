@@ -124,7 +124,7 @@ export default function Home() {
       }
 
       draw(context: CanvasRenderingContext2D) {
-        context.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
+        context.fillStyle = `rgba(59, 130, 246, ${this.opacity * 0.3})`;
         context.font = `${this.size * 14}px monospace`;
         context.fillText(this.char, this.x, this.y);
       }
@@ -148,8 +148,8 @@ export default function Home() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 150) {
-            ctx.strokeStyle = `rgba(34, 211, 238, ${0.3 * (1 - distance / 150)})`;
-            ctx.lineWidth = 1.5;
+            ctx.strokeStyle = `rgba(34, 211, 238, ${0.1 * (1 - distance / 150)})`;
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -187,11 +187,11 @@ export default function Home() {
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-500 rounded-full blur-3xl opacity-50 animate-float" style={{ animationDuration: '20s' }} />
+          <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-500 rounded-full blur-3xl opacity-20 animate-float" style={{ animationDuration: '20s' }} />
 
-          <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-cyan-500 rounded-full blur-3xl opacity-50 animate-pulse-slow" style={{ animationDuration: '25s' }} />
+          <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-cyan-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" style={{ animationDuration: '25s' }} />
 
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDuration: '15s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500 rounded-full blur-3xl opacity-15 animate-float" style={{ animationDuration: '15s' }} />
 
           <canvas id="hero-canvas" className="absolute inset-0 w-full h-full z-10"></canvas>
 
