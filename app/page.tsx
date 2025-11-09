@@ -183,11 +183,11 @@ export default function Home() {
   return (
     <main className="relative min-h-screen">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-500 rounded-full blur-3xl opacity-20 animate-float" style={{ animationDuration: '20s' }} />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500 rounded-full blur-3xl opacity-10 animate-float" style={{ animationDuration: '20s' }} />
 
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-cyan-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" style={{ animationDuration: '25s' }} />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500 rounded-full blur-3xl opacity-10 animate-pulse-slow" style={{ animationDuration: '25s' }} />
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500 rounded-full blur-3xl opacity-5 animate-float" style={{ animationDuration: '15s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-purple-500 rounded-full blur-3xl opacity-3 animate-float" style={{ animationDuration: '15s' }} />
 
         <canvas id="hero-canvas" className="absolute inset-0 w-full h-full opacity-100"></canvas>
       </div>
