@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 export default function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { theme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -12,6 +14,8 @@ export default function AnimatedBackground() {
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    const isDark = theme === 'dark' || resolvedTheme === 'dark';
 
     let animationFrameId: number;
     let particles: Particle[] = [];
@@ -55,9 +59,10 @@ export default function AnimatedBackground() {
         if (this.y < 0) this.y = canvasHeight;
       }
 
-      draw(context: CanvasRenderingContext2D) {
-        context.fillStyle = `rgba(59, 130, 246, ${this.opacity})`;
-        context.font = `${this.size * 8}px monospace`;
+      draw(context: CanvasRenderingContext2D, isDarkMode: boolean) {
+        const color = isDarkMode ? '59, 130, 246' : '37, 99, 235';
+        context.fillStyle = `rgba(${color}, ${this.opacity * 0.8})`;
+        context.font = `${this.size * 10}px monospace`;
         context.fillText(this.char, this.x, this.y);
       }
     }
@@ -73,15 +78,17 @@ export default function AnimatedBackground() {
     initParticles();
 
     const connectParticles = () => {
+      const lineColor = isDark ? '34, 211, 238' : '6, 182, 212';
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
-            ctx.strokeStyle = `rgba(34, 211, 238, ${0.1 * (1 - distance / 150)})`;
-            ctx.lineWidth = 0.5;
+          if (distance < 200) {
+            const opacity = isDark ? 0.15 : 0.2;
+            ctx.strokeStyle = `rgba(${lineColor}, ${opacity * (1 - distance / 200)})`;
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -96,7 +103,7 @@ export default function AnimatedBackground() {
 
       particles.forEach(particle => {
         particle.update(canvas.width, canvas.height);
-        particle.draw(ctx);
+        particle.draw(ctx, isDark);
       });
 
       connectParticles();
@@ -110,19 +117,19 @@ export default function AnimatedBackground() {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [theme, resolvedTheme]);
 
   return (
     <>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ opacity: 0.4 }}
+        style={{ opacity: 0.6 }}
       />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
+          className="absolute w-[500px] h-[500px] bg-blue-500/30 dark:bg-blue-500/20 rounded-full blur-3xl"
           animate={{
             x: ['-20%', '20%', '-20%'],
             y: ['10%', '30%', '10%'],
@@ -137,7 +144,7 @@ export default function AnimatedBackground() {
         />
 
         <motion.div
-          className="absolute w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+          className="absolute w-[500px] h-[500px] bg-cyan-500/30 dark:bg-cyan-500/20 rounded-full blur-3xl"
           animate={{
             x: ['20%', '-20%', '20%'],
             y: ['-10%', '10%', '-10%'],
@@ -152,7 +159,7 @@ export default function AnimatedBackground() {
         />
 
         <motion.div
-          className="absolute w-64 h-64 bg-blue-400/15 rounded-full blur-3xl"
+          className="absolute w-80 h-80 bg-blue-400/25 dark:bg-blue-400/15 rounded-full blur-3xl"
           animate={{
             x: ['-10%', '10%', '-10%'],
             y: ['20%', '-20%', '20%'],
@@ -170,7 +177,7 @@ export default function AnimatedBackground() {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-primary/10 font-mono text-xs"
+              className="absolute text-primary/30 dark:text-primary/10 font-mono text-sm font-semibold"
               initial={{
                 x: Math.random() * 100 + '%',
                 y: Math.random() * 100 + '%',
