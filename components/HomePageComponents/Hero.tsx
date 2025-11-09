@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import AnimatedBackground from '@/components/AnimatedBackground';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,11 +32,7 @@ const itemVariants = {
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl top-20 -left-20 animate-pulse-slow" />
-        <div className="absolute w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl bottom-20 -right-20 animate-pulse-slow" style={{ animationDelay: '2s' }} />
-        <div className="absolute w-64 h-64 bg-blue-400/20 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float" />
-      </div>
+      <AnimatedBackground />
 
       <motion.div
         variants={containerVariants}
@@ -58,13 +56,17 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white group">
-            Get a Quote
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10">
-            View Our Work
-          </Button>
+          <Link href="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white group">
+              Get a Quote
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+          <Link href="/portfolio">
+            <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10">
+              View Our Work
+            </Button>
+          </Link>
         </motion.div>
 
         <motion.div
