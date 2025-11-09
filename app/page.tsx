@@ -187,13 +187,14 @@ export default function Home() {
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden z-0">
-          <canvas id="hero-canvas" className="absolute inset-0 w-full h-full"></canvas>
-
           <motion.div
-            className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-500/30 rounded-full blur-3xl"
+            className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-3xl"
+            style={{
+              background: 'radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0.3) 40%, transparent 70%)',
+            }}
             animate={{
-              x: [0, 100, 0],
-              y: [0, 100, 0],
+              x: [-100, 50, -100],
+              y: [-100, 50, -100],
             }}
             transition={{
               duration: 20,
@@ -203,10 +204,13 @@ export default function Home() {
           />
 
           <motion.div
-            className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/30 rounded-full blur-3xl"
+            className="absolute bottom-0 right-0 w-[800px] h-[800px] rounded-full blur-3xl"
+            style={{
+              background: 'radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, rgba(6, 182, 212, 0.3) 40%, transparent 70%)',
+            }}
             animate={{
-              x: [0, -100, 0],
-              y: [0, -100, 0],
+              x: [100, -50, 100],
+              y: [100, -50, 100],
             }}
             transition={{
               duration: 25,
@@ -216,9 +220,13 @@ export default function Home() {
           />
 
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-3xl"
+            style={{
+              background: 'radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0.2) 40%, transparent 70%)',
+            }}
             animate={{
               scale: [1, 1.3, 1],
+              rotate: [0, 90, 0],
             }}
             transition={{
               duration: 15,
@@ -226,6 +234,8 @@ export default function Home() {
               ease: 'easeInOut',
             }}
           />
+
+          <canvas id="hero-canvas" className="absolute inset-0 w-full h-full z-10"></canvas>
 
           <div className="absolute inset-0 pointer-events-none">
             {['npm install', 'const', 'function', 'async', 'import', 'export', '=>', '{ }', 'git commit', 'npm run'].map((text, i) => (
