@@ -237,10 +237,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight overflow-visible">
               <span className="block">Transform Your Business</span>
               <span className="block">with</span>
-              <span className="block text-gradient">Digital Excellence</span>
+              <span className="block text-gradient leading-normal pb-2">Digital Excellence</span>
             </h1>
 
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-10 leading-relaxed">
