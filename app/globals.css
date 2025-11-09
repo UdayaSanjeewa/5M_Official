@@ -87,6 +87,29 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
     --background: 222 47% 4%;
     --foreground: 210 40% 98%;
     --card: 222 47% 6%;
@@ -106,7 +129,6 @@
     --border: 217 33% 17%;
     --input: 217 33% 17%;
     --ring: 217 91% 60%;
-    --radius: 0.5rem;
   }
 }
 
@@ -123,7 +145,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 bg-clip-text text-transparent;
   }
 
   .glow-effect {
@@ -132,6 +154,14 @@
 
   .glass-effect {
     @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .dark .glass-effect {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .light .glass-effect {
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200;
   }
 
   .animate-float {

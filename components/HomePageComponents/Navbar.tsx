@@ -6,6 +6,7 @@ import { Menu, X, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -52,7 +53,7 @@ export default function Navbar() {
             </motion.div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
@@ -75,6 +76,13 @@ export default function Navbar() {
                 </Link>
               );
             })}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <ThemeToggle />
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -122,6 +130,10 @@ export default function Navbar() {
                   </Link>
                 );
               })}
+              <div className="flex items-center justify-between pt-2 border-t border-foreground/10">
+                <span className="text-sm text-foreground/70">Theme</span>
+                <ThemeToggle />
+              </div>
               <Button asChild className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white">
                 <Link href="/contact">Get Started</Link>
               </Button>
