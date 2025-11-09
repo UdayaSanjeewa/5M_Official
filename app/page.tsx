@@ -186,82 +186,49 @@ export default function Home() {
       <Navbar />
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 overflow-hidden z-0">
-          <motion.div
-            className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-3xl"
-            style={{
-              background: 'radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0.3) 40%, transparent 70%)',
-            }}
-            animate={{
-              x: [-100, 50, -100],
-              y: [-100, 50, -100],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-blue-500 rounded-full blur-3xl opacity-50 animate-float" style={{ animationDuration: '20s' }} />
 
-          <motion.div
-            className="absolute bottom-0 right-0 w-[800px] h-[800px] rounded-full blur-3xl"
-            style={{
-              background: 'radial-gradient(circle, rgba(6, 182, 212, 0.6) 0%, rgba(6, 182, 212, 0.3) 40%, transparent 70%)',
-            }}
-            animate={{
-              x: [100, -50, 100],
-              y: [100, -50, 100],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
+          <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-cyan-500 rounded-full blur-3xl opacity-50 animate-pulse-slow" style={{ animationDuration: '25s' }} />
 
-          <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-3xl"
-            style={{
-              background: 'radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0.2) 40%, transparent 70%)',
-            }}
-            animate={{
-              scale: [1, 1.3, 1],
-              rotate: [0, 90, 0],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-500 rounded-full blur-3xl opacity-30 animate-float" style={{ animationDuration: '15s' }} />
 
           <canvas id="hero-canvas" className="absolute inset-0 w-full h-full z-10"></canvas>
 
-          <div className="absolute inset-0 pointer-events-none">
-            {['npm install', 'const', 'function', 'async', 'import', 'export', '=>', '{ }', 'git commit', 'npm run'].map((text, i) => (
-              <motion.div
-                key={i}
-                className="absolute text-blue-400/40 font-mono text-lg font-bold"
-                initial={{
-                  x: `${Math.random() * 100}%`,
-                  y: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  y: [`${Math.random() * 100}%`, `${Math.random() * 100}%`],
-                  opacity: [0.2, 0.5, 0.2],
-                }}
-                transition={{
-                  duration: Math.random() * 10 + 10,
-                  repeat: Infinity,
-                  ease: 'linear',
-                }}
-              >
-                {text}
-              </motion.div>
-            ))}
+          <div className="absolute inset-0 pointer-events-none z-20">
+            <div className="absolute top-[10%] left-[10%] text-blue-400 font-mono text-2xl font-bold opacity-60 animate-float" style={{ animationDuration: '12s' }}>
+              npm install
+            </div>
+            <div className="absolute top-[20%] right-[15%] text-cyan-400 font-mono text-xl font-bold opacity-50 animate-float" style={{ animationDuration: '15s', animationDelay: '1s' }}>
+              const
+            </div>
+            <div className="absolute top-[40%] left-[5%] text-blue-300 font-mono text-xl font-bold opacity-50 animate-float" style={{ animationDuration: '18s', animationDelay: '2s' }}>
+              function
+            </div>
+            <div className="absolute top-[60%] right-[10%] text-cyan-300 font-mono text-2xl font-bold opacity-60 animate-float" style={{ animationDuration: '14s', animationDelay: '3s' }}>
+              async
+            </div>
+            <div className="absolute top-[80%] left-[20%] text-blue-400 font-mono text-xl font-bold opacity-50 animate-float" style={{ animationDuration: '16s', animationDelay: '4s' }}>
+              import
+            </div>
+            <div className="absolute top-[30%] right-[25%] text-purple-400 font-mono text-xl font-bold opacity-50 animate-float" style={{ animationDuration: '20s', animationDelay: '5s' }}>
+              export
+            </div>
+            <div className="absolute top-[50%] left-[30%] text-cyan-400 font-mono text-2xl font-bold opacity-60 animate-float" style={{ animationDuration: '13s', animationDelay: '2s' }}>
+              {'=>'}
+            </div>
+            <div className="absolute top-[70%] right-[30%] text-blue-300 font-mono text-xl font-bold opacity-50 animate-float" style={{ animationDuration: '17s', animationDelay: '3s' }}>
+              {'{ }'}
+            </div>
+            <div className="absolute top-[25%] left-[40%] text-purple-300 font-mono text-xl font-bold opacity-50 animate-float" style={{ animationDuration: '19s', animationDelay: '1s' }}>
+              git commit
+            </div>
+            <div className="absolute top-[55%] right-[40%] text-cyan-400 font-mono text-xl font-bold opacity-60 animate-float" style={{ animationDuration: '15s', animationDelay: '4s' }}>
+              npm run
+            </div>
           </div>
 
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50 pointer-events-none z-30" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
