@@ -190,15 +190,13 @@ export default function Home() {
         <canvas id="hero-canvas" className="absolute inset-0 w-full h-full opacity-100"></canvas>
       </div>
 
-      <div className="relative z-10">
-        <ScrollProgress />
-        <Navbar />
-      </div>
+      <ScrollProgress />
+      <Navbar />
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
 
-          <div className="absolute inset-0 pointer-events-none z-20">
+          <div className="absolute inset-0 pointer-events-none z-0">
             <div className="absolute top-[10%] left-[10%] text-blue-400 font-mono text-2xl font-bold opacity-40 animate-float" style={{ animationDuration: '12s' }}>
               npm install
             </div>
@@ -232,7 +230,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -282,7 +280,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
