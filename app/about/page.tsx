@@ -5,38 +5,40 @@ import { Target, Eye, Award, Users, Zap, Heart, TrendingUp, Shield } from 'lucid
 import { Card } from '@/components/ui/card';
 import Navbar from '@/components/HomePageComponents/Navbar';
 import Footer from '@/components/HomePageComponents/Footer';
+import femaleAvatar from "@/public/femaleAvatar.png";
+import maleAvatar from "@/public/maleAvatar.png";
 
 const timeline = [
   {
-    year: '2019',
+    year: '2022',
     title: 'Company Founded',
     description: 'Started with a vision to transform digital experiences and empower businesses through innovative technology solutions.',
   },
   {
-    year: '2020',
+    year: '2023',
     title: 'First Major Client',
     description: 'Delivered a groundbreaking e-commerce platform that revolutionized online retail for a Fortune 500 company.',
   },
   {
-    year: '2021',
+    year: '2023',
     title: 'Team Expansion',
     description: 'Grew to a team of 15+ talented professionals, each bringing unique expertise in design, development, and strategy.',
   },
-  {
+/*   {
     year: '2022',
     title: 'Award Recognition',
     description: 'Received Best Digital Agency award and recognition for innovation in web application development.',
-  },
+  }, */
   {
-    year: '2023',
+    year: '2024',
     title: 'Global Reach',
     description: 'Expanded services to international markets, serving clients across North America, Europe, and Asia.',
   },
-  {
+/*   {
     year: '2024',
     title: 'Innovation Hub',
     description: 'Launched R&D division for emerging technologies including AI, blockchain, and progressive web applications.',
-  },
+  }, */
 ];
 
 const values = [
@@ -80,28 +82,28 @@ const values = [
 
 const team = [
   {
-    name: 'Sarah Johnson',
+    name: 'Udaya Sanjeewa',
     role: 'CEO & Founder',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: maleAvatar.src,
     bio: '15+ years of experience in software development and business strategy.',
   },
   {
-    name: 'Michael Chen',
+    name: 'Nivini',
+    role: 'Business Analysis',
+    image: femaleAvatar.src,
+    bio: 'Skilled in data-driven decision-making, process optimization, and strategic business planning.',
+  },
+  {
+    name: 'Chathura Madhawa',
     role: 'CTO',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: maleAvatar.src,
     bio: 'Expert in cloud architecture and scalable system design.',
   },
   {
-    name: 'Emily Rodriguez',
+    name: 'Asitha Liyanage',
     role: 'Head of Design',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: maleAvatar.src,
     bio: 'Award-winning designer with a passion for user-centered experiences.',
-  },
-  {
-    name: 'David Kim',
-    role: 'Lead Developer',
-    image: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400',
-    bio: 'Full-stack expert specializing in modern web technologies.',
   },
 ];
 

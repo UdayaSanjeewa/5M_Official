@@ -17,16 +17,16 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'contact@fivemsolutions.com',
+    value: 'fiveminutessolutions@gmail.com',
     description: 'Send us an email anytime',
-    link: 'mailto:contact@fivemsolutions.com',
+    link: 'mailto:fiveminutessolutions@gmail.com',
   },
   {
     icon: Phone,
     title: 'Phone',
-    value: '+1 (555) 123-4567',
+    value: '+94772134647',
     description: 'Mon-Fri from 9am to 6pm',
-    link: 'tel:+15551234567',
+    link: 'tel:+94772134647',
   },
   {
     icon: MapPin,

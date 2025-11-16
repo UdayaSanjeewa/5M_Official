@@ -1,19 +1,21 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Sparkles, Mail, Phone, MapPin } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Sparkles, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image"; // add this import
+import companyLogo from "@/public/5mLogo.png";
 
 const footerLinks = {
-  Company: ['About Us', 'Our Team', 'Careers', 'Blog'],
-  Services: ['Web Design', 'Development', 'Mobile Apps', 'SEO'],
-  Resources: ['Case Studies', 'Documentation', 'Support', 'Privacy Policy'],
+  Company: ["About Us", "Our Team", "Careers", "Blog"],
+  Services: ["Web Design", "Development", "Mobile Apps", "SEO"],
+  Resources: ["Case Studies", "Documentation", "Support", "Privacy Policy"],
 };
 
 const socialLinks = [
-  { name: 'Twitter', href: '#' },
-  { name: 'LinkedIn', href: '#' },
-  { name: 'GitHub', href: '#' },
-  { name: 'Dribbble', href: '#' },
+  { name: "Twitter", href: "#" },
+  { name: "LinkedIn", href: "#" },
+  { name: "GitHub", href: "#" },
+  { name: "Dribbble", href: "#" },
 ];
 
 export default function Footer() {
@@ -28,25 +30,34 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex items-center space-x-2 mb-4"
             >
-              <Sparkles className="w-8 h-8 text-primary glow-effect" />
-              <span className="text-2xl font-bold text-gradient">5M Solutions</span>
+              {/* <Sparkles className="w-8 h-8 text-primary glow-effect" /> */}
+              <Image
+                src={companyLogo}
+                alt="5M Solutions Logo"
+                width={50} // adjust size as needed
+                height={50} // adjust size as needed
+                className="rounded-full"
+              />
+              <span className="text-2xl font-bold text-gradient">
+                5M Solutions
+              </span>
             </motion.div>
             <p className="text-foreground/70 mb-6 max-w-sm">
-              Crafting Digital Experiences that Inspire. We transform ideas into stunning websites
-              and powerful software solutions.
+              Crafting Digital Experiences that Inspire. We transform ideas into
+              stunning websites and powerful software solutions.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>contact@fivemsolutions.com</span>
+                <span>fiveminutessolutions@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+94772134647</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>San Francisco, CA</span>
+                <span>Kadawatha, SL</span>
               </div>
             </div>
           </div>
@@ -77,7 +88,7 @@ export default function Footer() {
 
         <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-foreground/60 text-sm">
-            © 2024 NovaSoft Studios. All rights reserved.
+            © 2022 5M Solutions (PVT) LTD. All rights reserved.
           </p>
 
           <div className="flex space-x-6">

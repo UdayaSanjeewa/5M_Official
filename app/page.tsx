@@ -9,6 +9,7 @@ import Footer from "@/components/HomePageComponents/Footer";
 import Navbar from "@/components/HomePageComponents/Navbar";
 import ScrollProgress from "@/components/HomePageComponents/ScrollProgress";
 import Link from 'next/link';
+import maleAvatar from "@/public/maleAvatar.png";
 
 const features = [
   {
@@ -50,24 +51,31 @@ const services = [
 ];
 
 const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    company: 'TechCorp Inc.',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200',
+  // {
+  //   name: 'Sarah Johnson',
+  //   company: 'TechCorp Inc.',
+  //   image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200',
+  //   text: '5M Solutions transformed our digital presence completely. The team is professional, responsive, and delivered beyond our expectations.',
+  //   rating: 5,
+  // },
+    {
+    name: 'Asiri Ranasinghe',
+    company: 'Mega Marks (PVT) LTD',
+    image: maleAvatar.src,
     text: '5M Solutions transformed our digital presence completely. The team is professional, responsive, and delivered beyond our expectations.',
     rating: 5,
   },
   {
-    name: 'Michael Chen',
-    company: 'RetailMax',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200',
+    name: 'Sampath',
+    company: 'Ceylon Cinnamon Firewood (PVT) LTD',
+    image: maleAvatar.src,
     text: 'Outstanding work on our e-commerce platform. Sales increased by 180% in the first quarter after launch.',
     rating: 5,
   },
   {
-    name: 'Emily Rodriguez',
-    company: 'HealthPlus',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
+    name: 'Ruwan Gunathilaka',
+    company: 'EGadgetsLK (PVT) LTD',
+    image: maleAvatar.src,
     text: 'The HIPAA-compliant portal they built exceeded all our requirements. Highly recommend their services.',
     rating: 5,
   },
