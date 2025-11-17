@@ -24,9 +24,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    value: '+94772134647',
+    value: '+94714686935',
     description: 'Mon-Fri from 9am to 6pm',
-    link: 'tel:+94772134647',
+    link: 'tel:+94714686935',
   },
   {
     icon: MapPin,

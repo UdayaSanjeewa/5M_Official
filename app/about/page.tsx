@@ -95,7 +95,7 @@ const team = [
   },
   {
     name: 'Chathura Madhawa',
-    role: 'CTO',
+    role: 'CTO & Co-Founder',
     image: maleAvatar.src,
     bio: 'Expert in cloud architecture and scalable system design.',
   },
