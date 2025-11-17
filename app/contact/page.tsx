@@ -31,7 +31,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Office',
-    value: '123 Tech Street, San Francisco, CA 94105',
+    value: '434/B/3, Galahitiyawa, Ganemulla ,Kadawatha',
     description: 'Visit our office',
     link: '#',
   },
