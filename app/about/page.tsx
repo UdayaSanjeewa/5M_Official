@@ -7,6 +7,9 @@ import Navbar from '@/components/HomePageComponents/Navbar';
 import Footer from '@/components/HomePageComponents/Footer';
 import femaleAvatar from "@/public/femaleAvatar.png";
 import maleAvatar from "@/public/maleAvatar.png";
+import chathuraImg from "@/public/about/chathura.jpg";
+import udayaImg from "@/public/about/udaya.jpeg";
+import niviniImg from "@/public/about/nivini.jpeg";
 
 const timeline = [
   {
@@ -84,19 +87,19 @@ const team = [
   {
     name: 'Udaya Sanjeewa',
     role: 'CEO & Founder',
-    image: maleAvatar.src,
+    image: udayaImg.src,
     bio: '15+ years of experience in software development and business strategy.',
   },
   {
     name: 'Nivini',
     role: 'Business Analysis',
-    image: femaleAvatar.src,
+    image: niviniImg.src,
     bio: 'Skilled in data-driven decision-making, process optimization, and strategic business planning.',
   },
   {
     name: 'Chathura Madhawa',
     role: 'CTO',
-    image: maleAvatar.src,
+    image: chathuraImg.src,
     bio: 'Expert in cloud architecture and scalable system design.',
   },
   {
