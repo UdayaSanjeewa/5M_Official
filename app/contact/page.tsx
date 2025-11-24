@@ -305,7 +305,7 @@ export default function ContactPage() {
                   <MapPin className="w-16 h-16 text-primary" />
                 </div>
                 <p className="text-sm text-foreground/70 mt-4 text-center">
-                  Visit us at our San Francisco office or schedule a virtual meeting
+                  Visit us at our office or schedule a virtual meeting
                 </p>
               </Card>
             </motion.div>

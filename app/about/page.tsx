@@ -7,7 +7,7 @@ import Navbar from '@/components/HomePageComponents/Navbar';
 import Footer from '@/components/HomePageComponents/Footer';
 import femaleAvatar from "@/public/femaleAvatar.png";
 import maleAvatar from "@/public/maleAvatar.png";
-import chathuraImg from "@/public/about/chathura.jpg";
+import chathuraImg from "@/public/about/chathura.jpeg";
 import udayaImg from "@/public/about/udaya.jpeg";
 import niviniImg from "@/public/about/nivini.jpeg";
 
@@ -88,19 +88,19 @@ const team = [
     name: 'Udaya Sanjeewa',
     role: 'CEO & Founder',
     image: udayaImg.src,
-    bio: '15+ years of experience in software development and business strategy.',
+    bio: 'Leads the company with a clear vision for innovation and growth, ensuring every project delivers value, quality, and impact.',
   },
   {
     name: 'Nivini',
     role: 'Business Analysis',
     image: niviniImg.src,
-    bio: 'Skilled in data-driven decision-making, process optimization, and strategic business planning.',
+    bio: 'Skilled in data-driven decision-making, ensures smooth project delivery by translating client needs into clear requirements',
   },
   {
     name: 'Chathura Madhawa',
     role: 'CTO',
     image: chathuraImg.src,
-    bio: 'Expert in cloud architecture and scalable system design.',
+    bio: 'Leads the technical vision of the company with strong expertise in modern software engineering and innovative solution design.',
   },
   {
     name: 'Asitha Liyanage',
