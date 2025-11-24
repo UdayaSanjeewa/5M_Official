@@ -10,6 +10,7 @@ import maleAvatar from "@/public/maleAvatar.png";
 import chathuraImg from "@/public/about/chathura.jpeg";
 import udayaImg from "@/public/about/udaya.jpeg";
 import niviniImg from "@/public/about/nivini.jpeg";
+import samilaImg from "@/public/about/samila.png";
 
 const timeline = [
   {
@@ -91,7 +92,7 @@ const team = [
     bio: 'Leads the company with a clear vision for innovation and growth, ensuring every project delivers value, quality, and impact.',
   },
   {
-    name: 'Nivini',
+    name: 'Nivini Bathila',
     role: 'Business Analysis',
     image: niviniImg.src,
     bio: 'Skilled in data-driven decision-making, ensures smooth project delivery by translating client needs into clear requirements',
@@ -103,10 +104,10 @@ const team = [
     bio: 'Leads the technical vision of the company with strong expertise in modern software engineering and innovative solution design.',
   },
   {
-    name: 'Asitha Liyanage',
+    name: 'Samila Lakshan',
     role: 'Head of Design',
-    image: maleAvatar.src,
-    bio: 'Award-winning designer with a passion for user-centered experiences.',
+    image: samilaImg.src,
+    bio: 'Specializes in creating modern, user-friendly, and visually stunning interfaces that bring ideas to life with creativity and precision.',
   },
 ];
 
