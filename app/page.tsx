@@ -11,6 +11,10 @@ import ScrollProgress from "@/components/HomePageComponents/ScrollProgress";
 import Link from 'next/link';
 import maleAvatar from "@/public/maleAvatar.png";
 
+// ============================
+/* Just Edited */
+// ============================
+
 const features = [
   {
     icon: Zap,
