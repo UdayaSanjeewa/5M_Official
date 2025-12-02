@@ -216,7 +216,7 @@
 //     id: 1,
 //     title: "Mega Marks (PVT) LTD",
 //     category: "Web Application",
-//     image: megaMarksImage.src,
+//     image: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800",
 //     video: megaMarksVideo,
 //     description:
 //       "A full-featured e-commerce platform with payment integration, inventory management, and analytics.",
@@ -234,7 +234,7 @@
 //     id: 2,
 //     title: "Ceylon Cinnamon Firewood (PVT) LTD",
 //     category: "Web Application",
-//     image: ceylonCinnamonFirewoodImage.src,
+//     image: "https://images.pexels.com/photos/4386395/pexels-photo-4386395.jpeg?auto=compress&cs=tinysrgb&w=800",
 //     video: ceylonCinnamonFirewoodVideo,
 //     description:
 //       "Cross-platform mobile app for tracking workouts, nutrition, and health metrics.",
@@ -248,7 +248,7 @@
 //     id: 3,
 //     title: "Laabai Marketing (PVT) LTD",
 //     category: "E-Commerce Platform",
-//     image: laabaiMarketingImage.src,
+//     image: "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=800",
 //     video: laabaiMarketingVideo,
 //     description:
 //       "Complete brand identity package including logo, color palette, and brand guidelines.",
@@ -266,7 +266,7 @@
 //     id: 4,
 //     title: "EGadgetsLK (PVT) LTD",
 //     category: "E-Commerce Platform",
-//     image: eGadgetsLkImage.src,
+//     image: "https://images.pexels.com/photos/6214471/pexels-photo-6214471.jpeg?auto=compress&cs=tinysrgb&w=800",
 //     video: eGadgetsLkVideo,
 //     description:
 //       "Modern analytics dashboard with real-time data visualization and reporting.",
@@ -284,7 +284,7 @@
 //     id: 5,
 //     title: "Grand Hotel Hikkaduwa",
 //     category: "Official Website and Booking System",
-//     image: grandHotelImage.src,
+//     image: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800",
 //     video: grandHotelVideo,
 //     description:
 //       "Comprehensive UX research and UI design for a fintech application.",
@@ -302,7 +302,7 @@
 //     id: 6,
 //     title: "Medicare Center",
 //     category: "Web Application",
-//     image: medicareCenterImage.src,
+//     image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800",
 //     video: medicareCenterVideo,
 //     description:
 //       "Food ordering app with real-time order tracking and payment integration.",
@@ -756,12 +756,12 @@ import { Card } from "@/components/ui/card";
 import Navbar from "@/components/HomePageComponents/Navbar";
 import Footer from "@/components/HomePageComponents/Footer";
 
-import megaMarksImage from "@/public/portfolio/images/mega marks.png";
-import ceylonCinnamonFirewoodImage from "@/public/portfolio/images/ceylon cinnamon firewood.png";
-import laabaiMarketingImage from "@/public/portfolio/images/laabai marketing.png";
-import eGadgetsLkImage from "@/public/portfolio/images/e gadgets lk.png";
-import grandHotelImage from "@/public/portfolio/images/grand hotel.png";
-import medicareCenterImage from "@/public/portfolio/images/medicare center.png";
+// import megaMarksImage from "@/public/portfolio/images/mega marks.png";
+// import ceylonCinnamonFirewoodImage from "@/public/portfolio/images/ceylon cinnamon firewood.png";
+// import laabaiMarketingImage from "@/public/portfolio/images/laabai marketing.png";
+// import eGadgetsLkImage from "@/public/portfolio/images/e gadgets lk.png";
+// import grandHotelImage from "@/public/portfolio/images/grand hotel.png";
+// import medicareCenterImage from "@/public/portfolio/images/medicare center.png";
 
 // NOTE: video files are expected to be placed in the `public/portfolio/videos` folder
 // e.g. public/portfolio/videos/mega_marks_video.mp4
@@ -794,7 +794,7 @@ const projects: Project[] = [
     id: 1,
     title: "Mega Marks (PVT) LTD",
     category: "Web Application",
-    image: megaMarksImage.src,
+    image: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=800",
     video: "/portfolio/videos/mega_marks_video.mp4",
     description:
       "A full-featured e-commerce platform with payment integration, inventory management, and analytics.",
@@ -812,7 +812,7 @@ const projects: Project[] = [
     id: 2,
     title: "Ceylon Cinnamon Firewood (PVT) LTD",
     category: "Web Application",
-    image: ceylonCinnamonFirewoodImage.src,
+    image: "https://images.pexels.com/photos/4386395/pexels-photo-4386395.jpeg?auto=compress&cs=tinysrgb&w=800",
     video: "/portfolio/videos/ceylon_cinnamon_firewood_video.mp4",
     description:
       "Cross-platform mobile app for tracking workouts, nutrition, and health metrics.",
@@ -826,7 +826,7 @@ const projects: Project[] = [
     id: 3,
     title: "Laabai Marketing (PVT) LTD",
     category: "E-Commerce Platform",
-    image: laabaiMarketingImage.src,
+    image: "https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=800",
     video: "/portfolio/videos/laabai_marketing_video.mp4",
     description:
       "Complete brand identity package including logo, color palette, and brand guidelines.",
@@ -844,7 +844,7 @@ const projects: Project[] = [
     id: 4,
     title: "EGadgetsLK (PVT) LTD",
     category: "E-Commerce Platform",
-    image: eGadgetsLkImage.src,
+    image: "https://images.pexels.com/photos/6214471/pexels-photo-6214471.jpeg?auto=compress&cs=tinysrgb&w=800",
     video: "/portfolio/videos/e_gadgets_lk_video.mp4",
     description:
       "Modern analytics dashboard with real-time data visualization and reporting.",
@@ -862,7 +862,7 @@ const projects: Project[] = [
     id: 5,
     title: "Grand Hotel Hikkaduwa",
     category: "Official Website and Booking System",
-    image: grandHotelImage.src,
+    image: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800",
     video: "/portfolio/videos/grand_hotel_video.mp4",
     description:
       "Comprehensive UX research and UI design for a fintech application.",
@@ -880,7 +880,7 @@ const projects: Project[] = [
     id: 6,
     title: "Medicare Center",
     category: "Web Application",
-    image: medicareCenterImage.src,
+    image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800",
     video: "/portfolio/videos/medicare_center_video.mp4",
     description:
       "Food ordering app with real-time order tracking and payment integration.",
