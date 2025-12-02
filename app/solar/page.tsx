@@ -7,6 +7,8 @@ import {
   Battery,
   Zap,
   Shield,
+import Navbar from '@/components/HomePageComponents/Navbar';
+import Footer from '@/components/HomePageComponents/Footer';
   TrendingDown,
   Clock,
   Gauge,
@@ -48,8 +50,9 @@ export default function SolarPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
-      <div className="h-20" />
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
 
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-green-500/10 to-blue-500/10" />
@@ -627,18 +630,8 @@ export default function SolarPage() {
         </div>
       </section>
 
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-700">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400">
-            © 2024 5M Solutions. All rights reserved. | Empowering Sri Lanka with Clean Energy
-          </p>
-          <div className="mt-4">
-            <Link href="/" className="text-green-400 hover:text-green-300 transition-colors">
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 }
