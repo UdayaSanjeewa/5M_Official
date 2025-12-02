@@ -7,8 +7,6 @@ import {
   Battery,
   Zap,
   Shield,
-import Navbar from '@/components/HomePageComponents/Navbar';
-import Footer from '@/components/HomePageComponents/Footer';
   TrendingDown,
   Clock,
   Gauge,
@@ -24,6 +22,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Navbar from '@/components/HomePageComponents/Navbar';
+import Footer from '@/components/HomePageComponents/Footer';
 import Link from 'next/link';
 
 const fadeInUp = {
