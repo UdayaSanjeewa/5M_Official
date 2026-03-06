@@ -92,9 +92,9 @@ const team = [
     bio: 'Leads the company with a clear vision for innovation and growth, ensuring every project delivers value, quality, and impact.',
   },
   {
-    name: 'Nivini Bathila',
+    name: 'Avishka Malshan',
     role: 'Business Analysis',
-    image: niviniImg.src,
+    image: maleAvatar.src,
     bio: 'Skilled in data-driven decision-making, ensures smooth project delivery by translating client needs into clear requirements',
   },
   {
